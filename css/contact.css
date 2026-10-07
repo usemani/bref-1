@@ -1,0 +1,55 @@
+ form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.champ {
+    margin-bottom: 20px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.champ input,
+.champ textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.champ input:focus,
+.champ textarea:focus {
+    outline: none;
+    border-color: #222;
+}
+
+.champ textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #444;
+}
+
+.section{
+    text-align: center;
+}
