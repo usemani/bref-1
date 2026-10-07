@@ -1,6 +1,6 @@
  form {
-    max-width: 600px;
-    margin: 30px auto;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .champ {
@@ -10,7 +10,7 @@
 .champ label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .champ input,
@@ -42,7 +42,7 @@
     background-color: #222;
     color: white;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500px;
     cursor: pointer;
 }
 
@@ -52,12 +52,14 @@
 
 .section{
     text-align: center;
-}
-
-
-@media (max-width: 1023px) {
+    margin-top: 0px;
  }
 
-@media (max-width: 767px) {
-    
-}
+.section2 {
+   width: auto;
+   margin: 10px;
+ }
+
+
+
+ 
