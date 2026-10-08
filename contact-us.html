@@ -46,45 +46,39 @@
     <main>
       
  
-        <section class="section">
-            <div class="conteneur">
-                <h2>Envoyez-nous un message</h2>
+        <section class="contact-form">
+        <div class="form-container">
+         <h2>Envoyez-nous un message</h2>
+            <form action="#" method="POST">
 
-                <form action="mailto:infojamal@gmail.com" method="post" enctype="text/plain">
-                    <div class="champ">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
 
-                    <div class="champ">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
 
-                    <div class="champ">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone">
 
-                    <div class="champ">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-                    <button type="submit" class="submit-button">Envoyer</button>
-                </form>
-            </div>
-        </section>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
 
-          <section class="section2">
-            <div class="conteneur">
-                 <h5>Mes coordonnées</h5>
+     <section class="contact-info">
+        <h2>Nos coordonnées</h2>
+        <address>
+            Elan fitniss<br>
+            zip 40000<br>
+            Maroc, Casablanca<br>
+            Phone: <a href="tel:1234567890">0631510207</a><br>
+            Email: <a href="mailto:info@example.com">info@fitness.com</a>
+        </address>
+    </section>
 
-                <p>📍 Casablanca, Maroc</p>
-                <p>📞 0631610207</p>
-                <p>✉️ jojoproff@gmail.com</p>
-            </div>
-        </section>
          
     </main>
 
