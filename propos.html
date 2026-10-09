@@ -16,33 +16,29 @@
 
 <body>
   <header class="en-tete">
-    <div class="conteneur en-tete-contenu">
+     <div class="conteneur en-tete-contenu">
 
-     <a href="index.html" class="logo">
+        <a href="index.html" class="logo">
         <img src="img/elanfit.png" alt="Élan Fitness">
 
         </a>
+ 
         <nav aria-label="Navigation principale">
-            <ul class="menu">
-                <li>
-                    <a href="index.html">Accueil</a>
-                </li>
+    <input type="checkbox" id="burger-toggle" class="burger-checkbox"
+           aria-label="Afficher le menu">
+    <label for="burger-toggle" class="burger" aria-hidden="true">
+        <span class="burger-barres"></span>
+    </label>
 
-                <li>
-                    <a href="programmes.html">Programmes</a>
-                </li>
-
-                <li>
-                    <a href="propos.html">À propos</a>
-                </li>
-
-                <li>
-                    <a href="contact-us.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
+    <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="contact-us.html" class="lien-actif" aria-current="page">Contact</a></li>
+    </ul>
+</nav>
     </div>
+    
 
 </header>
      
