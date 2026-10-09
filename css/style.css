@@ -582,7 +582,10 @@ button:focus-visible {
     gap: 24px;
 }
 
-
+.burger,
+.burger-checkbox {
+  display: none;
+}
 
 /* ===== Petit écran d'ordinateur : 1024px à 1279px ===== */
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -629,17 +632,96 @@ button:focus-visible {
   .section-titre h2 { font-size: 26px; }
 
   
-  .en-tete { position: static; }
+    /* ===== En-tête avec menu burger (CSS seul) ===== */
   .en-tete-contenu {
-    height: auto;
-    padding: 16px 0;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;       /* logo à gauche, burger à droite */
+    height: 80px;
   }
-  .menu {
-    flex-wrap: wrap;
+
+  /* Case à cocher : invisible mais accessible au clavier */
+  .burger-checkbox {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .burger {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 8px 20px;
+    width: 44px;               /* zone tactile minimale */
+    height: 44px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Contour visible quand on atteint la case avec Tab */
+  .burger-checkbox:focus-visible + .burger {
+    outline: 3px solid #0F766E;
+    outline-offset: 2px;
+  }
+
+  /* Les 3 barres */
+  .burger-barres,
+  .burger-barres::before,
+  .burger-barres::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #0F1B2D;
+    border-radius: 2px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  .burger-barres {
+    position: relative;
+  }
+
+  .burger-barres::before,
+  .burger-barres::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .burger-barres::before { top: -7px; }
+  .burger-barres::after  { top: 7px; }
+
+  /* Menu déroulant sous l'en-tête (caché par défaut) */
+  .en-tete .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: 0 8px 16px rgba(15, 27, 45, 0.1);
+  }
+
+  .en-tete .menu a {
+    display: block;
+    padding: 14px 0;
+  }
+
+   .burger-checkbox:checked ~ .menu {
+    display: flex;
+  }
+
+   .burger-checkbox:checked + .burger .burger-barres {
+    background-color: transparent;
+  }
+  .burger-checkbox:checked + .burger .burger-barres::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .burger-checkbox:checked + .burger .burger-barres::after {
+    transform: translateY(-7px) rotate(-45deg);
   }
   .menu a { display: inline-block; padding: 8px 0; } 
   /* Hero */
