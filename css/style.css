@@ -173,12 +173,12 @@ button:focus-visible {
 
 .logo img {
     width: 70px;
-    height: 50px auto;
+    height: auto;
     display: block;
 }
 .logo {
   width: auto;
-  height: 24px;
+  height: auto;
   display: flex;
   align-items: center;
   font-family: 'Poppins', Arial, sans-serif;
@@ -566,45 +566,116 @@ button:focus-visible {
     list-style: none;
 }
 
-@media (max-width: 767px) {
-
-    .en-tete-contenu {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-}
-
-.contact-contenu {
+ .contact-contenu {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 50px;
 }
 
-@media (max-width: 767px) {
-
-    .contact-contenu {
-        grid-template-columns: 1fr;
-    }
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
+ .grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+
+/* ===== Petit écran d'ordinateur : 1024px à 1279px ===== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-texte h1 { font-size: 42px; }
+  .apropos-contenu { gap: 40px; }
+  .section { padding: 80px 0; }
+}
+
+/* ===== Tablette : 768px à 1023px ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section { padding: 72px 0; }
+  .section-titre { margin-bottom: 48px; }
+
+  .menu { gap: 20px; }
+
+  /* Hero : texte puis image */
+  .hero-contenu { flex-direction: column; align-items: stretch; }
+  .hero-texte { flex: none; }
+  .hero-texte h1 { font-size: 40px; }
+  .hero-image { flex: none; width: 100%; height: 320px; }
+
+  /* Cartes : 2 par ligne */
+  .cartes { flex-wrap: wrap; }
+  .carte { flex: 1 1 calc(50% - 12px); }
+
+  /* À propos : texte puis image */
+  .apropos-contenu { flex-direction: column; gap: 32px; }
+  .apropos-texte { flex: none; }
+  .apropos-image { flex: none; width: 100%; height: 300px; }
+
+  /* Chiffres : 2 par ligne */
+  .chiffres { flex-wrap: wrap; row-gap: 24px; }
+  .chiffre { flex: 1 1 50%; }
+  .chiffre:nth-child(odd) { border-left: none; }
+
+  .formules { margin-top: 72px; }
+}
+
+/* ===== Mobile : jusqu'à 767px ===== */
 @media (max-width: 767px) {
+  .conteneur { padding: 0 16px; }
+  .section { padding: 56px 0; }
+  .section-titre { margin-bottom: 40px; }
+  .section-titre h2 { font-size: 26px; }
 
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+  
+  .en-tete { position: static; }
+  .en-tete-contenu {
+    height: auto;
+    padding: 16px 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+  }
+  .menu a { display: inline-block; padding: 8px 0; } 
+  /* Hero */
+  .hero { padding: 40px 0 56px; }
+  .hero-contenu { flex-direction: column; align-items: stretch; }
+  .hero-texte { flex: none; text-align: center; }
+  .hero-texte h1 { font-size: 32px; }
+  .hero-description { margin-left: auto; margin-right: auto; font-size: 16px; }
+  .boutons { flex-direction: column; }
+  .boutons .bouton { width: 100%; }
+  .hero-image { flex: none; width: 100%; height: 240px; }
 
-    .hero h1 {
-        font-size: 36px;
-    }
+  /* Chiffres : empilés */
+  .chiffres { flex-direction: column; margin-top: 40px; padding: 24px; }
+  .chiffre + .chiffre {
+    border-left: none;
+    border-top: 1px solid #E5E7EB;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+  .chiffre-nombre { font-size: 30px; }
 
-    .hero p {
-        font-size: 16px;
-    }
+  /* Cartes : 1 par ligne */
+  .cartes { flex-direction: column; }
+
+  /* À propos */
+  .apropos-contenu { flex-direction: column; gap: 32px; }
+  .apropos-texte { flex: none; }
+  .apropos-texte h2 { font-size: 28px; }
+  .apropos-image { flex: none; width: 100%; height: 240px; }
+  .valeurs { flex-direction: column; }
+
+  .formules { margin-top: 56px; }
+
+  /* Pied de page */
+  .pied-haut { flex-direction: column; gap: 24px; }
+  .menu-pied { justify-content: flex-start; gap: 12px 20px; }
+  .pied-bas { flex-direction: column; gap: 8px; }
 }
