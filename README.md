@@ -35,40 +35,17 @@ The website presents the gym, its fitness programs, its values, and its contact 
 ## 🎨 Design
 
 The design uses a modern, sporty visual identity.
-
-* **Black:** `#111111`
-* **Red:** `#E63946`
-* **White:** `#FFFFFF`
-* **Light Gray:** `#F4F4F4`
-
 Fonts: Poppins for headings and Inter for body text.
 
 ## 🚀 How to Run the Project
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/usemani/bref-1.git
-   ```
-
-2. Open the project folder in VS Code.
-
-3. Open `index.html` in your browser, or use the Live Server extension.
 
 ## 📱 Responsive Design
 
 The website is designed to adapt to different screen sizes:
 
-* Large desktop: 1280px and above
-* Small desktop: 1024px–1279px
-* Tablet: 768px–1023px
-* Mobile: 767px and below
-
 ## ♿ Accessibility and SEO
 
 The project aims to improve accessibility through semantic HTML, descriptive image alt text, labeled form fields, and readable color contrast.
-
-SEO improvements include page-specific titles, meta descriptions, and a clear heading structure.
 
 ## 📚 What I Learned
 
